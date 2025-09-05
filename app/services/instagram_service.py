@@ -16,7 +16,7 @@ def get_video_format(url: str):
             }
             for f in info.get("formats", [])
         ]
-    return {"title": info.get("title"), "formats": formats}
+    return {"title": info.get("title"),"thumbnail":info.get("thumbnail") , "formats": formats}
 
 
 def download_instagram_video(url: str, format_id: str = "best"):
